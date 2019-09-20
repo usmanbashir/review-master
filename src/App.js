@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
+import Header from './components/header/Header';
 
 function App() {
   const [userLocation, setUserLocation] = useState({latitude: null, longitude: null});
@@ -21,16 +22,11 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>Review Master</h1>
-        <p>
-          An easy-to-use, simple service that offers reviews of restaurants around you.
-        </p>
-        {/* Show a message while waiting for the user to allow access to their location. */}
-        {userLocation.latitude === null &&
-          <strong>Waiting for your location...</strong>
-        }
-      </header>
+      <Header />
+      {/* Show a message while waiting for the user to allow access to their location. */}
+      {userLocation.latitude === null &&
+        <div className="notice">Waiting for your location...</div>
+      }
     </div>
   );
 }
