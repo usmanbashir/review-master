@@ -23,3 +23,26 @@
   border: 3px solid red;
   z-index: 9000;
 }
+
+.map-marker.user {
+  background: rgb(122,188,255);
+  background: radial-gradient(ellipse at center, rgba(122,188,255,1) 0%,rgba(64,150,238,1) 100%);
+  background-size: 400% 400%;
+  animation: pulseBG 1s ease infinite;
+  border: 0;
+  cursor: default;
+  width: 32px;
+  height: 32px;
+  left: -16px;
+  top: -16px;
+  box-shadow: none;
+}
+.map-marker.user.hovered {
+  background-color: dodgerblue;
+}
+
+@keyframes pulseBG {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}

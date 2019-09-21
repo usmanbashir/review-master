@@ -15,6 +15,10 @@ const Map = (props) => {
       defaultZoom={18}
     >
       {markers}
+      <Marker
+        lat={props.location.lat}
+        lng={props.location.lng}
+        isUser={true} />
     </GoogleMapReact>
   );
 }
