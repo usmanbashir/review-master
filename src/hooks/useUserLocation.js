@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 const useUserLocation = () => {
   const [userLocation, setUserLocation] = useState({lat: null, lng: null, found: false});
@@ -15,7 +15,7 @@ const useUserLocation = () => {
         });
       });
     } else {
-      alert('Sorry, but your browser does not supports getting your Geolocation.')
+      alert('Sorry, but your browser does not supports getting your Geolocation.');
     }
   }, []);
 

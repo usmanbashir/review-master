@@ -8,12 +8,25 @@ import * as data from './lib/dummy/restaurants';
 
 function App() {
   const userLocation = useUserLocation();
+  const [searchLocation, setSearchLocation] = useState({});
   const [restaurants, setRestaurants] = useState(null);
 
-  // Load initial restaurants data into state when app loads.
+  // Set the search location to fetch the restaurants near the user's
+  // current location. This effect only runs when the user first gives
+  // permission for their location and on app load each time afterward.
+  useEffect(() => {
+    if (userLocation.found) {
+      setSearchLocation({ lat: userLocation.lat, lng: userLocation.lng });
+    }
+  }, [userLocation]);
+
+  // Fetch the list of restaurants based on the current area in focus
+  // of the Google Map. This effect will run every time the search location
+  // changes. Which could be because of getting the users current location
+  // or the user changing the map area.
   useEffect(() => {
     setRestaurants(data.restaurants);
-  }, []);
+  }, [searchLocation]);
 
   return (
     <div className="App">
@@ -26,10 +39,12 @@ function App() {
 
       <div className="container">
         <div className="map">
-          {userLocation.found &&
+          {searchLocation.lat &&
             <Map
               apiKey={APIKeys.google}
-              location={userLocation}
+              userLocation={userLocation}
+              location={searchLocation}
+              changeLocation={setSearchLocation}
               restaurants={restaurants} />
           }
         </div>
