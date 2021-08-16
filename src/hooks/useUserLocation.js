@@ -1,5 +1,10 @@
 import { useState, useEffect } from 'react';
 
+/**
+ * Get the Users current location from their browser if it supports it.
+ *
+ * @returns {object} User Location
+ */
 const useUserLocation = () => {
   const [userLocation, setUserLocation] = useState({lat: null, lng: null, found: false});
 

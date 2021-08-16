@@ -12,7 +12,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "generate-docs": "node_modules/.bin/jsdoc --configure .jsdoc.json --verbose"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -29,5 +30,10 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "better-docs": "^1.4.7",
+    "jsdoc": "^3.6.3",
+    "jsdoc-export-default-interop": "^0.3.1",
+    "minami": "^1.2.3"
+  }
 }

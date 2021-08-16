@@ -1,6 +1,11 @@
 import React from 'react';
 import './Header.css';
+import Filter from '../filter/Filter';
 
+/**
+ * @component
+ * @returns {React.Component}
+ */
 function Header() {
   return (
     <header className="app-header">
@@ -10,8 +15,7 @@ function Header() {
           An easy-to-use, simple service that offers reviews of restaurants around you.
         </p>
       </div>
-      <div className="filter">
-      </div>
+      <Filter />
     </header>
   )
 }

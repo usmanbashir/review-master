@@ -1,0 +1,50 @@
+.new-restaurant {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 0 10px 0;
+}
+
+.new-restaurant h1 {
+  background: #282c34;
+  color: #fff;
+  margin: 0 0 20px 0;
+  padding: 2px;
+  width: 100%;
+  border-radius: 4px 4px 0 0;
+  text-align: center;
+}
+
+.new-restaurant input {
+  display: block;
+  margin: auto;
+  margin-bottom: 20px;
+  width: 90%;
+  padding: 8px 10px;
+}
+
+.new-restaurant form {
+  padding: 10px;
+  width: 100%;
+}
+
+.new-restaurant button {
+  background: #222222;
+  color: #fff;
+  border: 0;
+  padding: 10px;
+  width: 200px;
+  cursor: pointer;
+  display: block;
+  margin: auto;
+  margin-bottom: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.new-restaurant button:last-child {
+  margin-bottom: 0;
+}
+
+.new-restaurant button.submit {
+  background: limegreen;
+}

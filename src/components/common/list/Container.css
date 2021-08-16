@@ -1,0 +1,13 @@
+.list-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.list-empty {
+  padding: 15px;
+}
+
+.list-empty h3 {
+  margin: 0;
+}

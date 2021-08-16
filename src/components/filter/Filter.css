@@ -1,0 +1,29 @@
+.app-header .filter {
+  padding-left: 20px;
+  position: relative;
+}
+.app-header .filter::before {
+  position: absolute;
+  left: 0;
+  top: 15%;
+  bottom: 15%;
+  content: "";
+  border-left: 1px solid #444;
+}
+
+.app-header .filter h4 {
+  text-transform: uppercase;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.app-header .filter span:first-of-type {
+  padding-right: 10px;
+}
+.app-header .filter span:last-of-type {
+  padding: 0 10px 0 20px;
+}
+
+.app-header .filter select {
+  padding: 0 10px 0 2px;
+}
